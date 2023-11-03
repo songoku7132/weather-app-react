@@ -29,3 +29,4 @@ const slideShow = (l, r, con, myGallery, i) => {
   
   export default slideShow;
   
+  

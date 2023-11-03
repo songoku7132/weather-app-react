@@ -96,6 +96,7 @@ const App = () => {
       return <div>No data available.</div>
     } else {
       const { current, location, forecast } = weatherData;
+      console.log(weatherData)
       const gone = new Date(location.localtime);
       const weekDay = getWeekDay(gone);
       const numDays = forecast.forecastday.length;
@@ -117,7 +118,8 @@ const App = () => {
             <p className='temp'>{current.temp_c} °C</p>
           </div>
           <div className='left-row'>
-            <img className='condition-img' src={current.condition.icon.substr(21)} alt=''/>
+            {/* <img className='condition-img' src={current.condition.icon.substr(21)} alt=''/> */}
+            <img className='condition-img' src={current.condition.icon} alt=''/>
           </div>
           <div className='left-row'>
             <div className='search-box'>

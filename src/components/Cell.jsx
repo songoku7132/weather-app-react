@@ -14,9 +14,11 @@ const Cell = ({Id, data}) => {
         <div className='cell' id={Id}>
             <p className="week-day">{weekDay}</p>
             <p className="week-temp">{data.forecastday[Id].day.maxtemp_c}°C - {data.forecastday[Id].day.mintemp_c}°C</p>
-            <img src={data.forecastday[Id].day.condition.icon.substr(21)} alt="" className="week-img"></img>
+            <img src={data.forecastday[Id].day.condition.icon} alt="" className="week-img"></img>
         </div>
     )
 }
 
 export default Cell;
+
+
